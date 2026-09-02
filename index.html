@@ -806,8 +806,8 @@ body {
     <div style="margin-top:20px;transform:rotate(-1.5deg);position:relative;display:inline-block;width:75%;">
       <div class="tape washi-pink tape-ws" style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);height:18px;"></div>
       <div class="polaroid" style="width:100%;">
-        <img src="photo5.JPG" alt="" style="aspect-ratio:16/9">
-        <div class="caption">this is my favourite photo of you ♡</div>
+        <img src="photo5.jpeg" alt="" style="aspect-ratio:16/9">
+        <div class="caption">this is my favourite photo of you, siap ada munge ♡♡♡</div>
       </div>
     </div>
 
@@ -1032,7 +1032,7 @@ and something worth bringing with us to the next.</div>
     </div>
 
     <div style="margin-top:14px;font-family:'Caveat',cursive;font-size:.88rem;color:var(--ink);line-height:1.7;font-style:italic;opacity:.8;">
-      A little video filled with love — because some things are best said not in words, but in moments ✨
+      A little video filled with love — because some things are best said not in words, but in the memories you’ve given me ✨
     </div>
 
     <div style="position:absolute;bottom:18px;right:22px;font-size:1.3rem;">🎵 🎬</div>
@@ -1251,8 +1251,8 @@ function seekP(e) {
 
 // ── VIDEO ──
 function playVid(el) {
-  el.innerHTML = `<video width="100%" height="100%" autoplay controls
-    style="border-radius:10px;">
+  el.innerHTML = `<video width="100%" height="100%" controls
+    playsinline preload="metadata" style="border-radius:10px;">
     <source src="video.mp4" type="video/mp4">
   </video>`;
 }
@@ -1272,6 +1272,7 @@ function launchConfetti() {
     c.style.animationDelay = (Math.random() * .6) + 's';
     c.style.setProperty('--cx', (Math.random() * 200 - 100) + 'px');
     document.body.appendChild(c);
+
     setTimeout(() => c.remove(), 3500);
   }
   const m = document.createElement('div');

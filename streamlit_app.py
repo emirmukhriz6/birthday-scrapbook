@@ -44,7 +44,7 @@ def _data_uri(path: Path) -> str:
 
 
 @st.cache_data(show_spinner="Loading scrapbook…")
-def build_html() -> str:
+def build_html(html_mtime_ns: int) -> str:
     html = HTML_FILE.read_text(encoding="utf-8")
 
     def replace_attr(match: re.Match) -> str:
@@ -73,4 +73,4 @@ def build_html() -> str:
     return html
 
 
-components.html(build_html(), height=1000, scrolling=True)
+components.html(build_html(HTML_FILE.stat().st_mtime_ns), height=1000, scrolling=True)

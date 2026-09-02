@@ -5,4 +5,4 @@ backgroundColor = "#FDF5E6"
 secondaryBackgroundColor = "#F5EDD8"
 
 [server]
-enableStaticServing = false
+enableStaticServing = true

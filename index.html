@@ -1253,8 +1253,10 @@ function seekP(e) {
 function playVid(el) {
   el.innerHTML = `<video width="100%" height="100%" controls
     playsinline preload="metadata" style="border-radius:10px;">
-    <source src="video.mp4" type="video/mp4">
+    <source src="/app/static/video.mp4" type="video/mp4">
   </video>`;
+  const video = el.querySelector('video');
+  video.play().catch(() => {});
 }
 
 // ── CONFETTI ──
